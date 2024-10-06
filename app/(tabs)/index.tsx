@@ -5,7 +5,7 @@ export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{paddingTop:50}}>
             <Button
                 title="Add one"
                 variant="primary"

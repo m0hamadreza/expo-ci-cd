@@ -1,4 +1,4 @@
-appId: com.m0hamadreza.expocicd
+appId: ${APP_ID}
 ---
 - launchApp
 - tapOn: "Add one"

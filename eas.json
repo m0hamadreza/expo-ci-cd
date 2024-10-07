@@ -6,24 +6,18 @@
   "build": {
     "build-and-maestro-test": {
       "withoutCredentials": true,
-      "config": "build-and-maestro-test.yml",
       "android": {
+        "config": "build-and-maestro-test.yml",
         "buildType": "apk",
         "image": "latest"
       },
       "ios": {
+        "config": "build-and-maestro-test-ios.yml",
         "simulator": true,
         "image": "latest"
       }
     },
-    "build-and-maestro-test-ios": {
-      "withoutCredentials": true,
-      "config": "build-and-maestro-test-ios.yml",
-      "ios": {
-        "simulator": true,
-        "image": "latest"
-      }
-    },
+
     "development": {
       "developmentClient": true,
       "distribution": "internal"

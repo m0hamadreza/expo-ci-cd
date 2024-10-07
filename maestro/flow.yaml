@@ -1,4 +1,4 @@
-appId: io.expo.expo-ci-cd
+appId: com.m0hamadreza.expocicd
 ---
 - launchApp
 - tapOn: "Add one"

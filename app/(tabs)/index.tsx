@@ -6,6 +6,7 @@ export default function App() {
     const [text, setText] = useState('')
     return (
         <SafeAreaView style={{paddingTop:50}}>
+
             <Button
                 title="Add one"
                 variant="primary"

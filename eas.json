@@ -16,6 +16,14 @@
         "image": "latest"
       }
     },
+    "build-and-maestro-test-ios": {
+      "withoutCredentials": true,
+      "config": "build-and-maestro-test-ios.yml",
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      }
+    },
     "development": {
       "developmentClient": true,
       "distribution": "internal"

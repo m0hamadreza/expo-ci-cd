@@ -4,7 +4,45 @@ appId: ${APP_ID}
 - tapOn: "Add one"
 - tapOn:
     id: "add_ten"
-- assertVisible: "Number of taps: 11"
-- tapOn: "Change me!"
-- inputText: "Hello, Maestro!"
-- assertVisible: "You typed: Hello, Maestro!"
+- tapOn:
+      id: "add_ten"
+- tapOn:
+      id: "add_ten"
+- tapOn:
+      id: "add_ten"
+- tapOn:
+      id: "add_ten"
+- tapOn:
+      id: "add_ten"
+#- assertVisible: "Number of taps: 11"
+#- tapOn: "Change me!"
+#- inputText: "Hello, Maestro!"
+#- assertVisible: "You typed: Hello, Maestro!"
+#- scrollUntilVisible:
+#      element: "id-30" # or any other selector
+#      direction: DOWN
+#      speed: 10 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
+#      visibilityPercentage: 100 # 0-100 (optional, default: 100) Percentage of element visible in viewport
+#      centerElement: true
+- swipe:
+    from:
+      id: "first" # From (x, y) center of element
+    direction: UP # To (50% of width, 10% of height)
+    duration: 500
+- swipe:
+    from:
+      id: "second" # From (x, y) center of element
+    direction: UP # To (50% of width, 10% of height)
+- assertVisible:
+    text: "id-10"
+- assertVisible:
+    text: "id-23"
+#    id: second
+#- scroll:
+#      element:
+#          id: "viewId" # or any other selector
+#      direction: DOWN # DOWN|UP|LEFT|RIGHT (optional, default: DOWN)
+#      timeout: 50000 # (optional, default: 20000) ms
+#      speed: 40 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
+#      visibilityPercentage: 100 # 0-100 (optional, default: 100) Percentage of element visible in viewport
+#      centerElement: false # true|false (optional, default: false)

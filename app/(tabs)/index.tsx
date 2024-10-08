@@ -1,29 +1,45 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Button, Text, TextInput, StyleSheet } from 'react-native';
+import {SafeAreaView, Button, Text, TextInput, StyleSheet, View, ScrollView} from 'react-native';
 
 export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')
     return (
-        <SafeAreaView style={{paddingTop:50}}>
+        <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
+            <View style={{backgroundColor:"blue"}}>
+                <Button
+                    title="Add one"
+                    variant="primary"
+                    onPress={() => setTaps(taps + 1)}
+                />
+                <Button
+                    title="Add ten"
+                    testID="add_ten"
+                    onPress={() => setTaps(taps + 10)}
+                />
+                <Text>Number of taps: {taps}</Text>
+            </View>
 
-            <Button
-                title="Add one"
-                variant="primary"
-                onPress={() => setTaps(taps + 1)}
-            />
-            <Button
-                title="Add ten"
-                testID="add_ten"
-                onPress={() => setTaps(taps + 10)}
-            />
-            <Text>Number of taps: {taps}</Text>
-            <TextInput
-                testId="text_input"
-                placeholder="Change me!"
-                onChangeText={setText}
-            />
-            <Text>You typed: {text}</Text>
+
+
+            <ScrollView testID="first" contentContainerStyle={{backgroundColor:"green"}}>
+
+                {Array.from(Array(taps).keys()).map((item,index)=>{
+                    console.log(typeof `id-${index}`)
+                    return <View key={index} style={{height:50}}><Text testId={`id-${index}`}>{`id-${index}`}</Text></View>
+                })}
+            </ScrollView>
+
+            <ScrollView testID="second" contentContainerStyle={{backgroundColor:"yellow"}}>
+
+                {Array.from(Array(taps).keys()).map((item,index)=>{
+                    console.log(typeof `id-${index}`)
+                    return <View key={index} style={{height:50}}><Text testId={`id-${index}`}>{`id-${index}`}</Text></View>
+                })}
+            </ScrollView>
+
+
+
         </SafeAreaView>
     );
 }

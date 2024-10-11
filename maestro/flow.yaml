@@ -14,29 +14,41 @@ appId: ${APP_ID}
       id: "add_ten"
 - tapOn:
       id: "add_ten"
+#- repeat:
+#    while:
+#      notVisible: "id-8"
+#    commands:
+#      - scroll
 #- assertVisible: "Number of taps: 11"
 #- tapOn: "Change me!"
 #- inputText: "Hello, Maestro!"
 #- assertVisible: "You typed: Hello, Maestro!"
+#- swipe:
+#    start: 90%, 80% # From (90% of width, 50% of height)
+#    end: 90%, 10% # To (10% of width, 50% of height)
+
 #- scrollUntilVisible:
-#      element: "id-30" # or any other selector
+#      id:
+#      element:
+#        id: "id-30"
+#     # or any other selector
 #      direction: DOWN
-#      speed: 10 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
+#      speed: 0 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
 #      visibilityPercentage: 100 # 0-100 (optional, default: 100) Percentage of element visible in viewport
 #      centerElement: true
-- swipe:
-    from:
-      id: "first" # From (x, y) center of element
-    direction: UP # To (50% of width, 10% of height)
-    duration: 500
-- swipe:
-    from:
-      id: "second" # From (x, y) center of element
-    direction: UP # To (50% of width, 10% of height)
-- assertVisible:
-    text: "id-10"
-- assertVisible:
-    text: "id-23"
+#- swipe:
+#    from:
+#      id: "first" # From (x, y) center of element
+#    direction: UP # To (50% of width, 10% of height)
+#    duration: 500
+#- swipe:
+#    from:
+#      id: "second" # From (x, y) center of element
+#    direction: UP # To (50% of width, 10% of height)
+#- assertVisible:
+#    text: "id-10"
+#- assertVisible:
+#    text: "id-23"
 #    id: second
 #- scroll:
 #      element:

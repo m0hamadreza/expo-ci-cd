@@ -15,25 +15,26 @@
         "config": "build-and-maestro-test-ios.yml",
         "simulator": true,
         "image": "latest"
-      }
+      },
+      "channel": "build-and-maestro-test"
     },
-
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview"
     },
     "production": {
       "android": {
         "buildType": "apk"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {
-    "production": {
-
-    }
+    "production": {}
   }
 }

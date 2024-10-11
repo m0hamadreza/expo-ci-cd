@@ -26,7 +26,7 @@ export default function App() {
 
                 {Array.from(Array(taps).keys()).map((item,index)=>{
                     console.log(typeof `id-${index}`)
-                    return <View key={index} style={{height:50}}><Text testId={`id-${index}`}>{`id-${index}`}</Text></View>
+                    return <View key={index} style={{height:50}}><Text testID={`id-${index}`}>{`id-${index}`}</Text></View>
                 })}
             </ScrollView>
 
@@ -34,7 +34,7 @@ export default function App() {
 
                 {Array.from(Array(taps).keys()).map((item,index)=>{
                     console.log(typeof `id-${index}`)
-                    return <View key={index} style={{height:50}}><Text testId={`id-${index}`}>{`id-${index}`}</Text></View>
+                    return <View key={index} style={{height:50}}><Text testID={`id-${index}`}>{`id-${index}`}</Text></View>
                 })}
             </ScrollView>
 

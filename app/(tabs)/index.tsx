@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, Button, Text, TextInput, StyleSheet, View, ScrollView} from 'react-native';
 import * as Updates from 'expo-updates';
-
+im
 export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')
@@ -11,7 +11,9 @@ export default function App() {
     const api = async () => {
         try {
             const a = await Updates.checkForUpdateAsync();
-            setCheck(JSON.stringify(a) )
+
+            setCheck(JSON.stringify(a))
+           await Updates.setExtraParamAsync("channel", "production")
             //setState(JSON.stringify(a));
             await Updates.fetchUpdateAsync();
         } catch (e: any) {
@@ -25,8 +27,8 @@ export default function App() {
     return (
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
             <View style={{backgroundColor:"blue"}}>
-                <Text>{state}</Text>
-                <Text>{check}</Text>
+                <Text>state:{state}</Text>
+                <Text>check:{check}</Text>
                 <Button
                     title="Add one"
                     variant="primary"

@@ -5,8 +5,8 @@ import * as Updates from 'expo-updates';
 export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')
-    const [state,setState] = useState()
-    const [check,setCheck] = useState<any>()
+    const [state,setState] = useState("")
+    const [check,setCheck] = useState<any>("")
 
     const api = async () => {
         try {

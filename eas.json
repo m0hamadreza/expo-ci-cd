@@ -35,6 +35,15 @@
         "buildType": "apk"
       },
       "channel": "production"
+    },
+    "stage": {
+      "env": {
+        "EXPO_PUBLIC_ENV":"STAGE"
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "channel": "stage"
     }
   },
   "submit": {

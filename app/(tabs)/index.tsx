@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, Button, Text, TextInput, StyleSheet, View, ScrollView} from 'react-native';
 import * as Updates from 'expo-updates';
-im
 export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')

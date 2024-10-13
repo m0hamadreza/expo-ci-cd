@@ -1,12 +1,32 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {SafeAreaView, Button, Text, TextInput, StyleSheet, View, ScrollView} from 'react-native';
+import * as Updates from 'expo-updates';
 
 export default function App() {
     const [taps, setTaps] = useState(0);
     const [text, setText] = useState('')
+    const [state,setState] = useState()
+    const [check,setCheck] = useState<any>()
+
+    const api = async () => {
+        try {
+            const a = await Updates.checkForUpdateAsync();
+            setCheck(JSON.stringify(a) )
+            //setState(JSON.stringify(a));
+            await Updates.fetchUpdateAsync();
+        } catch (e: any) {
+            setState(e?.message);
+            console.log(e);
+        }
+    };
+    useEffect(() => {
+        api();
+    }, []);
     return (
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
             <View style={{backgroundColor:"blue"}}>
+                <Text>{state}</Text>
+                <Text>{check}</Text>
                 <Button
                     title="Add one"
                     variant="primary"

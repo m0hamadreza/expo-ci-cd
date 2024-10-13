@@ -28,6 +28,9 @@
       "channel": "preview"
     },
     "production": {
+      "env": {
+        "EXPO_PUBLIC_ENV":"PRODUCTION"
+      },
       "android": {
         "buildType": "apk"
       },

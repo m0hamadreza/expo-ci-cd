@@ -61,7 +61,6 @@
       "enabled": true,
       "requestHeaders":{
         "channel": "production"
-
       },
       "fallbackToCacheTimeout": 3000,
       "codeSigningCertificate": "./code-signing/certificate.pem",

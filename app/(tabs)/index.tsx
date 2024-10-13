@@ -7,22 +7,22 @@ export default function App() {
     const [state,setState] = useState("")
     const [check,setCheck] = useState<any>("")
 
-    const api = async () => {
-        try {
-            const a = await Updates.checkForUpdateAsync();
-
-            setCheck(JSON.stringify(a))
-           await Updates.setExtraParamAsync("channel", "production")
-            //setState(JSON.stringify(a));
-            await Updates.fetchUpdateAsync();
-        } catch (e: any) {
-            setState(e?.message);
-            console.log(e);
-        }
-    };
-    useEffect(() => {
-        api();
-    }, []);
+    // const api = async () => {
+    //     try {
+    //         const a = await Updates.checkForUpdateAsync();
+    //
+    //         setCheck(JSON.stringify(a))
+    //        await Updates.setExtraParamAsync("channel", "production")
+    //         //setState(JSON.stringify(a));
+    //         await Updates.fetchUpdateAsync();
+    //     } catch (e: any) {
+    //         setState(e?.message);
+    //         console.log(e);
+    //     }
+    // };
+    // useEffect(() => {
+    //     api();
+    // }, []);
     return (
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
             <View style={{backgroundColor:"blue"}}>

@@ -55,9 +55,14 @@
     "runtimeVersion": {
       "policy": "appVersion"
     },
+
     "updates": {
       "url": "http://192.168.13.159:3000/api/manifest",
       "enabled": true,
+      "requestHeaders":{
+        "channel": "production"
+
+      },
       "fallbackToCacheTimeout": 3000,
       "codeSigningCertificate": "./code-signing/certificate.pem",
       "codeSigningMetadata": {

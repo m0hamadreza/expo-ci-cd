@@ -28,6 +28,7 @@ export default function App() {
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
             <View style={{backgroundColor:"blue"}}>
                 <Text>state:{state}</Text>
+
                 <Text>check:{check}</Text>
                 <Button
                     title="Add one"

@@ -57,6 +57,9 @@
     },
     "updates": {
       "url": "http://192.168.13.159:3000/api/manifest",
+      "requestHeaders": {
+        "expoChannel": 100
+      },
       "enabled": true,
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0,

@@ -17,7 +17,7 @@ export default function App() {
                     testID="add_ten"
                     onPress={() => setTaps(taps + 10)}
                 />
-                <Text>test prod Number of taps: {taps}</Text>
+                <Text>10 Number of taps: {taps}</Text>
             </View>
 
 

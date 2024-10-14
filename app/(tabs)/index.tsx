@@ -25,7 +25,7 @@ export default function App() {
     return (
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
             <ScrollView style={{}}>
-                <Text>version 2.5 Number of taps: {taps}</Text>
+                <Text>version 1 Number of taps: {taps}</Text>
                 <Text>state:{state}</Text>
                 <Text>check:{check}</Text>
                 <Button

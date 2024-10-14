@@ -25,9 +25,9 @@ export default function App() {
     }, []);
     return (
         <SafeAreaView style={{paddingTop:50,backgroundColor:"red",flex:1}}>
-            <View style={{backgroundColor:"blue"}}>
+            <ScrollView style={{backgroundColor:"blue"}}>
+                <Text>version 2 Number of taps: {taps}</Text>
                 <Text>state:{state}</Text>
-
                 <Text>check:{check}</Text>
                 <Button
                     title="Add one"
@@ -39,8 +39,7 @@ export default function App() {
                     testID="add_ten"
                     onPress={() => setTaps(taps + 10)}
                 />
-                <Text>10 Number of taps: {taps}</Text>
-            </View>
+            </ScrollView>
 
 
 
